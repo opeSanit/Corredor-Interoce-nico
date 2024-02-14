@@ -757,7 +757,20 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_CorredorInterocenicoOaxaca_0rule0_eval_expression(context) {
+function exp_DisivinMunicipalOaxaca_0rule0_eval_expression(context) {
+    // CVE_MUN IS NOT NULL
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['CVE_MUN']  !== null);
+    } else {
+        return (feature['CVE_MUN']  !== null);
+    }
+}
+
+
+function exp_CorredorInterocenicoOaxaca_1rule0_eval_expression(context) {
     // "Municipios Corredor Oaxaca — Hoja1_Corredor" = 1
 
     var feature = context.feature;
@@ -770,7 +783,7 @@ function exp_CorredorInterocenicoOaxaca_0rule0_eval_expression(context) {
 }
 
 
-function exp_DivisinMunicipalVeracruz_1rule0_eval_expression(context) {
+function exp_DivisinMunicipalVeracruz_2rule0_eval_expression(context) {
     // ID_MUN IS NOT NULL
 
     var feature = context.feature;
@@ -783,7 +796,7 @@ function exp_DivisinMunicipalVeracruz_1rule0_eval_expression(context) {
 }
 
 
-function exp_CorredorInterocenicoVeracruz_2rule0_eval_expression(context) {
+function exp_CorredorInterocenicoVeracruz_3rule0_eval_expression(context) {
     // "Municipios Veracruz_Corredor Interoceánico" = 1
 
     var feature = context.feature;
@@ -796,7 +809,7 @@ function exp_CorredorInterocenicoVeracruz_2rule0_eval_expression(context) {
 }
 
 
-function exp_MinutaRequisitada_4rule0_eval_expression(context) {
+function exp_MinutaRequisitada_5rule0_eval_expression(context) {
     // "Municipios Veracruz_Minutas Recibidas" = 1 AND "Municipios Veracruz_Corredor Interoceánico" = 1
 
     var feature = context.feature;
@@ -809,7 +822,7 @@ function exp_MinutaRequisitada_4rule0_eval_expression(context) {
 }
 
 
-function exp_QRGenerado_5rule0_eval_expression(context) {
+function exp_QRGenerado_6rule0_eval_expression(context) {
     // "Municipios Veracruz_Estatus" = 1 AND "Municipios Veracruz_Corredor Interoceánico" = 1
 
     var feature = context.feature;
